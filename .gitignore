@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Node (in case example apps get added later)
+node_modules/
+.next/
+dist/
+build/
+*.log
+.env
+.env.local
+
+# Claude Code local artifacts
+.remember/
+.claude/settings.local.json
