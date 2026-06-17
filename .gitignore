@@ -20,3 +20,4 @@ build/
 # Claude Code local artifacts
 .remember/
 .claude/settings.local.json
+/test
