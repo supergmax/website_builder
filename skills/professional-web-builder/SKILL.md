@@ -151,6 +151,26 @@ Don't claim "done" without evidence.
 - Visually check the actual result (the `vercel:verification` skill or a browser pass is
   ideal). State plainly what you verified; if something is incomplete, say so.
 
+### ÉTAPE 6 — Taste & Design Excellence (passe finale, obligatoire pour tout livrable visuel)
+
+It compiles and runs — now make it *impeccable*. This is the gate that separates "works"
+from "great", and the step that kills the generic AI look for good.
+
+1. **Critique** the result against the brief (industry, audience, mood, anti-references):
+   does the eye land where it should? Is the single most important thing the most prominent?
+2. **Run the anti-slop detectors** and fix every hit — grey-on-colour text, pure black/grey,
+   default indigo→purple gradients & dark glows, everything-in-cards / nested cards,
+   Inter/Arial/system fonts as the *display* face, cramped spacing, sub-44px touch targets.
+3. **Refine** through the taste lenses: distill → typeset → colorize → layout → animate →
+   delight → onboard/harden (empty/loading/error states) → clarify (real, specific copy).
+4. **Verify motion craft**: fast (~150–250 ms micro, ~300–500 ms transitions),
+   `ease-out`/spring (never linear or bounce/elastic), purposeful & interruptible,
+   `transform`/`opacity` only, origin-aware, `prefers-reduced-motion` safe.
+5. **Run the pre-flight checklist** — every box must *honestly* pass before you say "done".
+
+**Read `references/design-excellence.md`** for the full detectors, lenses, and checklist.
+Apply with judgment — taste is contextual, not a rote list.
+
 ---
 
 ## 4. Quick reference — what to read when
@@ -159,6 +179,8 @@ Don't claim "done" without evidence.
 |------------------|------|
 | Install / wire the chosen UI kit | `references/ui-kits.md` (that kit's section only) |
 | Decide visual direction, avoid generic AI aesthetics | `references/design-principles.md` |
+| Run the final taste / anti-slop pass before shipping | `references/design-excellence.md` |
 
 Keep this loop tight: blueprint → confirm kit → scaffold → build atomically → animate &
-polish → verify. That discipline, applied every time, is the whole point of the skill.
+polish → verify → **taste pass**. That discipline, applied every time, is the whole point
+of the skill.
