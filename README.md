@@ -49,58 +49,34 @@ product team built it, not like a generic AI template.
 
 ## 🚀 Installation
 
-The skill is a plain folder that lives under your Claude Code skills directory
-(`~/.claude/skills/` globally, or `<project>/.claude/skills/` per-project).
-
-### Option 1 — `npx skills add` (recommended · [skills.sh](https://www.skills.sh/) ecosystem)
-
-Install straight from GitHub with the **skills** CLI — no clone, no copy. It works across
-Claude Code, Cursor, Codex, OpenCode and many more agents.
+**One command** — installs the skill globally for Claude Code (and Cursor, Codex,
+OpenCode and more) via the [skills.sh](https://www.skills.sh/) ecosystem:
 
 ```bash
-# Global — available in all your projects
 npx skills add supergmax/website_builder --skill professional-web-builder -g
-
-# Or into the current project only (drop the -g)
-npx skills add supergmax/website_builder --skill professional-web-builder
 ```
 
-The CLI finds `skills/professional-web-builder/SKILL.md` in this repo and installs it to
-`~/.claude/skills/` (global) or `.claude/skills/` (project). Handy flags: `-y` to skip
-prompts, `--copy` to copy files instead of symlinking, `-a claude-code` to target a
-specific agent.
+Restart Claude Code (or open a new session) and the skill is live. Drop `-g` to install
+into the current project only.
 
-### Option 2 — install script
+<details>
+<summary>Prefer a manual install?</summary>
 
-**Windows (PowerShell):**
-```powershell
-git clone https://github.com/supergmax/website_builder.git
-cd website_builder
-./install.ps1            # installs globally to ~/.claude/skills
-# ./install.ps1 -Project "C:\path\to\your\project"   # install into a specific project
-```
+Clone and run the installer:
 
-**macOS / Linux:**
 ```bash
 git clone https://github.com/supergmax/website_builder.git
 cd website_builder
-chmod +x install.sh
-./install.sh             # installs globally to ~/.claude/skills
-# ./install.sh /path/to/your/project                 # install into a specific project
+./install.sh            # macOS / Linux   ·   ./install.ps1 on Windows
 ```
 
-### Option 3 — manual copy
+…or simply copy the folder into your skills directory:
 
 ```bash
-# macOS / Linux
 cp -r skills/professional-web-builder ~/.claude/skills/
 ```
-```powershell
-# Windows
-Copy-Item -Recurse skills\professional-web-builder $HOME\.claude\skills\
-```
 
-Restart Claude Code (or start a new session) so it picks up the new skill.
+</details>
 
 ---
 
