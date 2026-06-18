@@ -49,40 +49,54 @@ product team built it, not like a generic AI template.
 
 ## 🚀 Installation
 
-The skill is a plain folder that lives under your Claude Code skills directory:
+The skill is a plain folder that lives under your Claude Code skills directory
+(`~/.claude/skills/` globally, or `<project>/.claude/skills/` per-project).
 
-- **Global** (all projects): `~/.claude/skills/`
-- **Project-scoped** (this repo only): `<project>/.claude/skills/`
+### Option 1 — `npx skills add` (recommended · [skills.sh](https://www.skills.sh/) ecosystem)
 
-### Option 1 — install script (recommended)
+Install straight from GitHub with the **skills** CLI — no clone, no copy. It works across
+Claude Code, Cursor, Codex, OpenCode and many more agents.
+
+```bash
+# Global — available in all your projects
+npx skills add supergmax/website_builder --skill professional-web-builder -g
+
+# Or into the current project only (drop the -g)
+npx skills add supergmax/website_builder --skill professional-web-builder
+```
+
+The CLI finds `skills/professional-web-builder/SKILL.md` in this repo and installs it to
+`~/.claude/skills/` (global) or `.claude/skills/` (project). Handy flags: `-y` to skip
+prompts, `--copy` to copy files instead of symlinking, `-a claude-code` to target a
+specific agent.
+
+### Option 2 — install script
 
 **Windows (PowerShell):**
 ```powershell
-git clone <this-repo-url> professional-web-builder
-cd professional-web-builder
+git clone https://github.com/supergmax/website_builder.git
+cd website_builder
 ./install.ps1            # installs globally to ~/.claude/skills
 # ./install.ps1 -Project "C:\path\to\your\project"   # install into a specific project
 ```
 
 **macOS / Linux:**
 ```bash
-git clone <this-repo-url> professional-web-builder
-cd professional-web-builder
+git clone https://github.com/supergmax/website_builder.git
+cd website_builder
 chmod +x install.sh
 ./install.sh             # installs globally to ~/.claude/skills
 # ./install.sh /path/to/your/project                 # install into a specific project
 ```
 
-### Option 2 — manual copy
-
-Copy the skill folder into your skills directory:
+### Option 3 — manual copy
 
 ```bash
-# Global
+# macOS / Linux
 cp -r skills/professional-web-builder ~/.claude/skills/
 ```
 ```powershell
-# Windows, global
+# Windows
 Copy-Item -Recurse skills\professional-web-builder $HOME\.claude\skills\
 ```
 
